@@ -1,0 +1,18 @@
+.search-layout {
+    .search-page {
+        margin: 30px auto 93px;
+        .search-box {
+            .search-input-container {
+                padding: 17px 12px;
+
+                input {
+                    margin-left: 10px;
+                }
+            }
+
+            .search-button {
+                padding: 23px 81px;
+            }
+        }
+    }
+}

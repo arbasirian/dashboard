@@ -1,0 +1,14 @@
+.subsection-info {
+    padding: 10px 0;
+    .ant-modal-content {
+        padding: 18px 5px !important;
+        height: 95vh;
+        overflow-y: auto;
+
+        .modal-container {
+            .image-container {
+                margin: 0 auto !important;
+            }
+        }
+    }
+}

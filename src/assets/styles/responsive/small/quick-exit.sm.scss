@@ -1,0 +1,14 @@
+.quick-exit {
+    right: 12%;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .subtitle {
+            display: none;
+        }
+    }
+
+}

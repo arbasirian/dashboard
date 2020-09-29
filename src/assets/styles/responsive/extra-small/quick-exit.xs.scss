@@ -1,0 +1,14 @@
+.quick-exit {
+    right: calc(50% - 109px) !important;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .subtitle {
+            display: none;
+        }
+    }
+
+}

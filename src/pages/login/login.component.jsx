@@ -2,6 +2,7 @@ import React from 'react'
 import login from 'assets/images/login.svg';
 import './login.styles.scss';
 import { useHistory } from 'react-router-dom';
+import  LoginForm  from 'components/login-form/login-form.component'
 
 const LoginPage = () => {
     const history = useHistory();
@@ -19,9 +20,7 @@ const LoginPage = () => {
                     </div>
                 </div>
                 <div className="right-wrapper">
-                    <div className="form-container">
-
-                    </div>
+                    <LoginForm />
                 </div>
             </div>
         </div>

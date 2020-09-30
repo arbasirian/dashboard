@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import searchReducer from './search/search.reducer';
+import searchReducer from './dashboard/dashboard.reducer';
 
 
 const rootReducer = combineReducers({

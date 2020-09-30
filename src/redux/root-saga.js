@@ -1,10 +1,10 @@
 import { all, call } from "redux-saga/effects";
-import { startFetchResults } from "./search/search.sagas";
+import { startFetchGifs } from "./dashboard/dashboard.sagas";
 
 
 export default function* rootSaga() {
     yield all([
-        call(startFetchResults),
+        call(startFetchGifs),
 
     ]);
 

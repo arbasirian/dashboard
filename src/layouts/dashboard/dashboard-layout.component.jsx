@@ -1,6 +1,6 @@
 import React from 'react';
 import './dashboard-layout.styles.scss';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 import SideNavigation from 'components/side-navigation/side-navigation.component';
 
 const { Header, Content, Sider } = Layout;

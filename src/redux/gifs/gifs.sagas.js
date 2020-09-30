@@ -1,8 +1,8 @@
 
 import {  put, takeLatest } from 'redux-saga/effects';
-import DashboardActionTypes from './dashboard.types';
-import { fetchGifsSuccess, fetchGifsFailure } from './dashboard.actions';
+import DashboardActionTypes from './gifs.types';
 import { fetchGifList } from 'services/giphy-api';
+import { fetchGifsFailure, fetchGifsSuccess } from './gifs.actions';
 
 export function* fetchGifsAsync({ payload }) {
     try {

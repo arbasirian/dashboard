@@ -7,10 +7,11 @@ import { useHistory } from 'react-router-dom';
 const RegisterForm = () => {
     const { register, handleSubmit } = useForm();
     const history = useHistory();
-    const showDashboard = () => history.push(`/dashboard`);
+    const showLogin = () => history.push(`/auth/login`);
 
     const onLogin = ({ email, username, password }) => {
-        console.log(email, username, password)
+        console.log(email, username, password);
+        showLogin()
     };
     return (
         <div className="register-form">

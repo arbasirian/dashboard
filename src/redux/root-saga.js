@@ -1,5 +1,5 @@
 import { all, call } from "redux-saga/effects";
-import { startFetchGifs } from "./dashboard/dashboard.sagas";
+import { startFetchGifs } from "./gifs/gifs.sagas";
 
 
 export default function* rootSaga() {

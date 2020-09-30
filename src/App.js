@@ -9,7 +9,7 @@ import DashboardLayoutRoute from 'layouts/dashboard/dashboard-layout-route.compo
 
 // Pages Component
 import AuthenticationPage from 'pages/authentication/authentication.component';
-import HomePage from 'pages/home/home.component';
+import DashboardPage from 'pages/dashboard/dashboard.component';
 
 class App extends Component {
   render() {
@@ -24,7 +24,7 @@ class App extends Component {
           <AuthLayoutRoute path="/auth" component={AuthenticationPage}/>  
 
           {/* Dashboard Layout Pages */}
-          <DashboardLayoutRoute path="/dashboard"  component={ HomePage }/>  
+          <DashboardLayoutRoute path="/dashboard"  component={ DashboardPage }/>  
 
 
         </Switch>  

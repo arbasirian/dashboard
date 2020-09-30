@@ -1,0 +1,30 @@
+.auth-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px;
+
+    .left-wrapper {
+        flex: 1 1 0;
+
+        .footer {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.63;
+            letter-spacing: normal;
+            color: #5e6e8c;
+
+            .register {
+                font-weight: bold;
+                color: #fd3f91;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right-wrapper {
+        flex: 1 1 0;
+    }
+}

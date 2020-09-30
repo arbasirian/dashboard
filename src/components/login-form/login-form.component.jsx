@@ -10,7 +10,6 @@ const LoginForm = () => {
     const showDashboard = () => history.push(`/dashboard`);
 
     const onLogin = ({ email, password }) => {
-        console.log(email, password)
         if(email === 'admin@admin.com' && password === 'admin') showDashboard()
     };
     return (

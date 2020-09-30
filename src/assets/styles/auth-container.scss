@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 55px;
-
+    align-items: center;
     .left-wrapper {
         flex: 1 1 0;
         .image-container {
@@ -30,6 +30,18 @@
     }
 
     .right-wrapper {
-        flex: 1 1 0;    
+        flex: 1 1 0;
+        padding: 0 11px;  
+        .header {
+            font-size: 22px;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.23;
+            letter-spacing: normal;
+            text-align: left;
+            color: #051532;
+            margin-bottom: 90px;
+        }  
     }
 }

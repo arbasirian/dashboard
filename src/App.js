@@ -10,6 +10,7 @@ import DashboardLayoutRoute from 'layouts/dashboard/dashboard-layout-route.compo
 // Pages Component
 import AuthenticationPage from 'pages/authentication/authentication.component';
 import DashboardPage from 'pages/dashboard/dashboard.component';
+import * as storageService from 'services/browser-storage';
 
 class App extends Component {
   render() {
@@ -17,7 +18,7 @@ class App extends Component {
       <Router>  
         <Switch>  
           <Route exact path="/">  
-            <Redirect to="/auth/login" />  
+            { storageService.get('DashboardToken') ? <Redirect to="/dashboard" />   : <Redirect to="/auth/login" />  } 
           </Route>  
 
           {/* Auth Layout Pages */}

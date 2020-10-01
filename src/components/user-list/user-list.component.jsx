@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import deleteIcon from 'assets/images/delete.png';
 import editIcon from 'assets/images/edit.png';
@@ -7,23 +7,17 @@ import editIcon from 'assets/images/edit.png';
 import { selectUserList } from 'redux/user/user.selectors'
 import { createStructuredSelector } from 'reselect'
 import { connect } from 'react-redux';
-import { deleteUser, updateUser } from 'redux/user/user.actions';
-import Modal from 'antd/lib/modal/Modal';
-import UpdateUser from 'components/update-user/update-user.component';
+import { deleteUser } from 'redux/user/user.actions';
+
+import { useHistory } from 'react-router-dom';
 
 
 
-const UserList = ({ userList, deleteUser, updateUserData }) => {
-    const [showUpdate, setShowUpdate] = useState(false);
-    const [selectedUser, setSelectedUser] = useState(null);
-    const onUpdate = (user) => {
-        setShowUpdate(true)
-        setSelectedUser(user)
-    }
-    const updateData = (user) =>  {
-        updateUserData(user)
-        setShowUpdate(false);
-    }
+const UserList = ({ match, userList, deleteUser }) => {
+    const history = useHistory();
+
+    const showProfile = (username) => history.push(`profile/${username}`);
+
 
     return (
         <div className="user-list">
@@ -46,7 +40,7 @@ const UserList = ({ userList, deleteUser, updateUserData }) => {
                                 <td>{lastName}</td>
                                 <td>{email}</td>
                                 <td>
-                                    <button className="btn action-btn" onClick={ () => onUpdate({ username, firstName, lastName, email }) }><img src={editIcon} alt="" /></button>
+                                    <button className="btn action-btn" onClick={ () => showProfile(username) }><img src={editIcon} alt="" /></button>
                                     <button className="btn action-btn" onClick={() => deleteUser(username)}><img src={deleteIcon} alt="" /></button>
                                 </td>
                             </tr>
@@ -58,15 +52,6 @@ const UserList = ({ userList, deleteUser, updateUserData }) => {
 
                 </tbody>
             </table>
-            <Modal
-                visible={showUpdate}
-                centered
-                footer={false}
-                width="80%"
-                onCancel={ () => setShowUpdate(false) }
-            >
-                <UpdateUser userInfo={ selectedUser }  onUpdateUser={ (user) => updateData(user) }  />
-            </Modal>
         </div>
     )
 }
@@ -77,7 +62,6 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
     deleteUser: (username) => dispatch(deleteUser(username)),
-    updateUserData: (user) => dispatch(updateUser(user))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);

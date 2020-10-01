@@ -10,7 +10,7 @@ const LoginForm = () => {
     const showDashboard = () => history.push(`/dashboard`);
 
     const onLogin = ({ email, password }) => {
-        if(email === 'admin@admin.com' && password === 'admin') showDashboard()
+        if (email === 'admin@admin.com' && password === 'admin') showDashboard()
     };
     return (
         <div className="login-form">
@@ -21,10 +21,16 @@ const LoginForm = () => {
                         <label>Email</label>
                         <input name="email" type="email" ref={register({ required: true })} placeholder="Please enter Email" />
                     </div>
+
+
+                </div>
+                <div className="input-wrapper">
                     <div className="input-item">
                         <label>Password</label>
                         <input name="password" type="password" ref={register({ required: true })} placeholder="Please enter Password" />
                     </div>
+                </div>
+                <div className="input-wrapper">
                     <button className="btn submit-btn" type="submit">submit</button>
 
                 </div>

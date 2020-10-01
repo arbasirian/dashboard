@@ -1,16 +1,17 @@
-import TodoActionTypes from './user.types';
+import UserActionTypes from "./user.types";
 
-export const fetchGifs = filters => ({
-    type: TodoActionTypes.FETCH_GIFS,
-    payload: filters
+export const addNewUser = user => ({
+    type: UserActionTypes.ADD_NEW_USER,
+    payload: user
 });
 
-export const fetchGifsSuccess = results => ({
-    type: TodoActionTypes.FETCH_GIFS_SUCCESS,
-    payload: results
+export const updateUser = user => ({
+    type: UserActionTypes.UPDATE_CUSTOM_USER,
+    payload: user
 });
 
-export const fetchGifsFailure = errorMessage => ({
-    type: TodoActionTypes.FETCH_GIFS_FAILURE,
-    payload: errorMessage
+export const deleteUser = username => ({
+    type: UserActionTypes.DELETE_CUSTOM_USER,
+    payload: username
 });
+

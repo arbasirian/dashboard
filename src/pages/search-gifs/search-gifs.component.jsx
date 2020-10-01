@@ -8,13 +8,10 @@ import { connect } from 'react-redux'
 import { fetchGifs } from 'redux/gifs/gifs.actions'
 
 const SearchGifsPage = ({ pagination, gifs, query, fetchGifs, isLoading }) => {
-    console.log(query)
     const onSizeChange = (page) => {
-        console.log(query)
         if (!query) return;
         fetchGifs({ query, limit: 25, offset: (page - 1) * 25 })
     }
-    const { offset, total_count } = pagination;
     return (
         <div className="search-gifs-page">
             <Spin spinning={isLoading} delay={500}>
@@ -23,10 +20,10 @@ const SearchGifsPage = ({ pagination, gifs, query, fetchGifs, isLoading }) => {
                 {
                     gifs?.length > 0 ? <Pagination
                         showSizeChanger={false}
-                        onChange={onSizeChange}
-                        defaultCurrent={offset / 25}
+                        onChange={(page) => onSizeChange(page)}
+                        defaultCurrent={pagination?.offset ? pagination?.offset / 25 : 0}
                         defaultPageSize={25}
-                        total={total_count}
+                        total={pagination?.total_count}
                     /> : ''
                 }
             </Spin>

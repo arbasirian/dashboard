@@ -8,7 +8,7 @@ const GifList = ({ selectGifs }) => {
     return (
         <div className="gif-list">
             {
-                selectGifs.map(({images, id}) => <div key={id} className="image-container"><img src={images.original.url} alt="loading..." /></div>)
+                selectGifs?.map(({images, id}) => <div key={id} className="image-container"><img src={images.original.url} alt="loading..." /></div>)
             }
         </div>
     )

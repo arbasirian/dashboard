@@ -3,7 +3,7 @@ import './auth-layout.styles.scss';
 
 const AuthLayout = ({ children }) => (
     <div className="auth-layout">
-            {children}
+        {children}
     </div>
 );
 

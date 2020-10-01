@@ -1,0 +1,19 @@
+.gif-list {
+    display: flex;
+    flex-flow: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .image-container {
+        background-color: #0fccce;
+        margin-bottom: 25px;
+        width: 248px;
+        height: auto;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

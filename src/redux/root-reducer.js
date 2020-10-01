@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import searchReducer from './dashboard/dashboard.reducer';
+import gifsReducer from './gifs/gifs.reducer';
 
 
 const rootReducer = combineReducers({
-    search: searchReducer
+    gifs: gifsReducer
 });
 
 export default rootReducer;

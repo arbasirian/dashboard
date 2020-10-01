@@ -2,6 +2,7 @@ const GifsActionTypes = {
     FETCH_GIFS: 'FETCH_GIFS',
     FETCH_GIFS_SUCCESS: 'FETCH_GIFS_SUCCESS',
     FETCH_GIFS_FAILURE: 'FETCH_GIFS_FAILURE',
+    ADD_SEARCH_QUERY: 'ADD_SEARCH_QUERY'
 };
 
 export default GifsActionTypes;

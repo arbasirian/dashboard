@@ -8,7 +8,7 @@ const RegisterForm = () => {
     const { register, handleSubmit } = useForm();
     const history = useHistory();
     const showLogin = () => history.push(`/auth/login`);
-
+    
     const onLogin = ({ email, username, password }) => {
         console.log(email, username, password);
         showLogin()

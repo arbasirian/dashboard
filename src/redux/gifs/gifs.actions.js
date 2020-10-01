@@ -14,3 +14,8 @@ export const fetchGifsFailure = errorMessage => ({
     type: DashboardActionTypes.FETCH_GIFS_FAILURE,
     payload: errorMessage
 });
+
+export const addSearchQuery = query => ({
+    type: DashboardActionTypes.ADD_SEARCH_QUERY,
+    payload: query
+});

@@ -6,8 +6,8 @@ import { fetchGifsFailure, fetchGifsSuccess } from './gifs.actions';
 
 export function* fetchGifsAsync({ payload }) {
     try {
-        const { query } = payload;
-        const searchResults = yield fetchGifList(query);
+        const { query, limit, offset } = payload;
+        const searchResults = yield fetchGifList(query, limit, offset);
         yield put(fetchGifsSuccess(searchResults));
     } catch(error) {
         yield put(fetchGifsFailure(error.message));

@@ -1,0 +1,50 @@
+.search-gif {
+    margin-bottom: 50px;
+    form {
+        .search-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 18px;
+            background-color: #f5f7fb;
+            width: 100%;
+            border: 1px solid #e8e8e8;
+            input {
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.19;
+                letter-spacing: normal;
+                text-align: left;
+                color: #31415f;
+                margin-left: 27px;
+                background-color: transparent;
+                border: none;
+                width: 100%;
+                &:focus {
+                    outline: none;
+                }
+            }
+    
+            .search-btn {
+                background-color: #051532;
+                border-radius: 16px;
+                height: 44px;
+                width: 44px;
+                min-width: 44px;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 7px 11px;
+                cursor: pointer;
+                span.icon-search {
+                    font-size: 24px;
+                    color: #fff;
+                }
+                &:focus { outline: none; }
+            }
+        }
+    }
+}

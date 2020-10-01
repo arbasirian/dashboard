@@ -10,7 +10,6 @@ const RegisterForm = () => {
     const showLogin = () => history.push(`/auth/login`);
 
     const onLogin = ({ email, username, password }) => {
-        console.log(email, username, password);
         showLogin()
     };
     return (

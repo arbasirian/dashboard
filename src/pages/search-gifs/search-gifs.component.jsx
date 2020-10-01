@@ -14,7 +14,7 @@ const SearchGifsPage = ({ pagination, gifs, query, fetchGifs, isLoading }) => {
         if (!query) return;
         fetchGifs({ query, limit: 25, offset: (page - 1) * 25 })
     }
-    const { count, offset, total_count } = pagination;
+    const { offset, total_count } = pagination;
     return (
         <div className="search-gifs-page">
             <Spin spinning={isLoading} delay={500}>

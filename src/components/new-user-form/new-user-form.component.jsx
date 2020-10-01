@@ -42,7 +42,7 @@ const NewUserForm = ({ onAddUser, userList }) => {
                     </div>
                 </div>
                 <div className="input-wrapper">
-                    <button className="btn submit-btn" type="submit">Update User</button>
+                    <button className="btn submit-btn" type="submit">Add New User</button>
                 </div>
 
             </form>

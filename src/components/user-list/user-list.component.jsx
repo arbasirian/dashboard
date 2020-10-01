@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './user-list.styles.scss';
 
 import deleteIcon from 'assets/images/delete.png';
 import editIcon from 'assets/images/edit.png';

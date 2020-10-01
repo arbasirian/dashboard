@@ -1,16 +1,17 @@
-import TodoActionTypes from './todo.types';
+import TodoActionTypes from "./todo.types";
 
-export const fetchGifs = filters => ({
-    type: TodoActionTypes.FETCH_GIFS,
-    payload: filters
+export const addNewTodo = item => ({
+    type: TodoActionTypes.ADD_NEW_TODO,
+    payload: item
 });
 
-export const fetchGifsSuccess = results => ({
-    type: TodoActionTypes.FETCH_GIFS_SUCCESS,
-    payload: results
+export const updateTodo = item => ({
+    type: TodoActionTypes.UPDATE_CUSTOM_TODO,
+    payload: item
 });
 
-export const fetchGifsFailure = errorMessage => ({
-    type: TodoActionTypes.FETCH_GIFS_FAILURE,
-    payload: errorMessage
+export const deleteTodo = itemId => ({
+    type: TodoActionTypes.DELETE_CUSTOM_TODO,
+    payload: itemId
 });
+

@@ -3,28 +3,24 @@ import TodoActionTypes from './todo.types';
 
 const INITIAL_STATE = {
     list: [],
-    error: null,
-    isLoading: false,
 }
 
 const todoReducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {
-        case TodoActionTypes.FETCH_RESULT:
+        case TodoActionTypes.ADD_NEW_TODO:
             return {
                 ...state,
-                isLoading: true
+                list: [...state.list, action.payload]
             };
-        case TodoActionTypes.FETCH_RESULT_SUCCESS:
+        case TodoActionTypes.UPDATE_CUSTOM_TODO:
             return {
                 ...state,
-                gifList: action.payload,
-                isLoading: false
+                list: state.list.map( (item) => item.id === action.payload.id ?  action.payload : item)
             };
-        case TodoActionTypes.FETCH_RESULT_FAILURE:
+        case TodoActionTypes.DELETE_CUSTOM_TODO:
             return {
                 ...state,
-                error: action.payload,
-                isLoading: false
+                list: state.list.filter((item) => item.id !== action.payload)
             };
         default: 
             return state;
